@@ -1,15 +1,7 @@
-const Sequelize = require('sequelize');
+const { Sequelize } = require('sequelize');
 
 const dbConfig = require('../config/database');
 
-class Database {
-  constructor() {
-    this.init();
-  }
+const db = new Sequelize(dbConfig);
 
-  init() {
-    this.connection = new Sequelize(dbConfig);
-  }
-}
-
-module.exports = new Database();
+module.exports = db;
