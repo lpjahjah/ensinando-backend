@@ -1,8 +1,8 @@
 /* RUN FROM MYSQL COMMAND LINE */
 
-DROP SCHEMA IF EXISTS dbEnsinando;
-CREATE SCHEMA dbEnsinando;
-USE dbEnsinando;
+DROP SCHEMA IF EXISTS db_ensinando;
+CREATE SCHEMA db_ensinando;
+USE db_ensinando;
 
 Create Table tipo_usuario
 (
