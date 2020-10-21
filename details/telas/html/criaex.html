@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>Criação de atividades</title>
+	<link rel="stylesheet" type="text/css" href="../css/criaexEstilo.css">
+</head>
+<body>
+<div class="header">
+	<div class="menu">
+		<input type="checkbox" id="menuzi">
+		<label for="menuzi">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+		<nav for="menuzi">
+			<ul>
+				<li><a href="">Calendario de Atividades</a></li>
+				<li><a href="">Estatisticas</a></li>
+				<li><a href="">Denuncia</a></li>
+				<li><div class="ultimaopcao"><a href="">Sair</a></div></li>
+			</ul>
+		</nav>	
+	</div>
+
+	<div class="logo">
+		<h1>Ensin@ndo</h1>
+	</div>
+	<div class="pagina">
+		<h2>criação de atividades</h2>
+	</div>
+	<div class="infousuario">
+		<p>Olá Francisco Antunes Brito Silva</p>
+	</div>
+</div>
+
+<div id="controles">
+	<button #btnalternativa>adc.alternativa</button>
+	<button #btndissertativa>adc.dissertativa</button>
+	<div #salvamento>
+		<button #btnsalvar>salvar</button>
+	</div>
+</div>
+
+<div id="organainfo">
+	<form id="infoatividade">
+		<input type="text" name="name" placeholder="nome da atividade"><br>
+		<input type="date" name="date">
+		<input type="time" name="prazo">
+	</form>
+</div>
+
+<div id="conteiner">
+	<div class="questãoalternativa">
+		<button class="excluirpergunta">excluir</button>
+		<h1 class="contador">1-</h1>
+		<br>
+		<textarea class="enunciado" resize="none" placeholder="digite o enunciado da questão"></textarea>
+		<ul>
+			<li class="alternativa">
+				<button type="radio"></button><div class="letra">A)</div><input type="text" placeholder="digite a alternativa">
+			</li>
+			<li class="alternativa">
+				<button type="radio"></button><div class="letra">B)</div><input type="text" placeholder="digite a alternativa"><button class="excluiropção">excluir</button>
+			</li>
+			<button class="addopção">+</button>
+		</ul>
+	</div>
+
+	<div class="questãodissertativa">
+		<button class="excluirpergunta">  excluir</button>
+		<h1 class="contador">2-</h1>
+		</br>
+		<textarea class="enunciado" resize="none" placeholder="digite o enunciado da questão"></textarea>
+		</br></br></br>
+		<textarea class="resposta" resize="none" placeholder="aqui ira a resposta do aluno" disabled=""></textarea>
+
+	</div>
+
+
+</div>
+
+</body>
+</html>

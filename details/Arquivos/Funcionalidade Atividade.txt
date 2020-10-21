@@ -1,0 +1,10 @@
+Usuario -> turma - > atividade 
+-> exercicios -> resposta
+
+Login do Aluno
+Menu de Atividade
+Acesso a Atividade
+Carrego os Exercícios
+Pego as Respostas
+Coloco as Respostas no Banco
+Encerro a Atividade

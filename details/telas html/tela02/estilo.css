@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+ }
+
+ body{
+ 	background-color: #EF7800;
+ 	font-family: arial;
+ 	font-size: 100% ;
+ }
+
+.cabeçario{	
+	display: flex;
+ 	height: 80px;
+ 	background-color:#053CA0 ;
+ 	position: relative;
+ 	z-index: 1;
+ 	justify-content: space-around;
+
+ }
+
+.divbarra{ 
+	width: 33.33%;
+	color: #ffffff;
+}
+
+.divbarra p{
+	float: right;
+	margin-right: 20px;
+}
+
+
+.divbarra h1{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.divbarra h2{
+	margin-top: 25px;
+	margin-left: 75px;
+}
+
+
+.conteudo{
+	position: relative;
+	margin-left: 475px;
+	margin-top: 200px;
+}
+
+
+button{
+	
+	height: 50px;
+	width:  175px;
+}

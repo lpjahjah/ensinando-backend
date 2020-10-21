@@ -1,0 +1,11 @@
+C:\Users\NeroH\Downloads\Ensinando\ensinando\ensinando\bin\ensinando.dll
+C:\Users\NeroH\Downloads\Ensinando\ensinando\ensinando\bin\ensinando.pdb
+C:\Users\NeroH\Downloads\Ensinando\ensinando\ensinando\obj\Debug\ensinando.dll
+C:\Users\NeroH\Downloads\Ensinando\ensinando\ensinando\obj\Debug\ensinando.pdb
+C:\Users\NeroH\Downloads\Ensinando\ensinando\ensinando\bin\MySql.Data.dll
+C:\Users\NeroH\Downloads\Ensinando\ensinando\ensinando\obj\Debug\ensinando.csprojResolveAssemblyReference.cache
+C:\escola\ensinando\ensinandoasp\ensinando\ensinando\bin\ensinando.dll
+C:\escola\ensinando\ensinandoasp\ensinando\ensinando\bin\ensinando.pdb
+C:\escola\ensinando\ensinandoasp\ensinando\ensinando\obj\Debug\ensinando.csprojResolveAssemblyReference.cache
+C:\escola\ensinando\ensinandoasp\ensinando\ensinando\obj\Debug\ensinando.dll
+C:\escola\ensinando\ensinandoasp\ensinando\ensinando\obj\Debug\ensinando.pdb

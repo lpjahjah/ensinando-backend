@@ -1,0 +1,31 @@
+body{
+	background-color:#EF7800;
+}
+#botao{ text-align: center }
+form{
+	margin-left: 550px;
+	margin-top: 50px;
+    width: 350px;
+    text-align: center;
+    padding: 15px 20px;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    background-color:#08088A;
+    font-size: 18px;
+    font-family: arial;
+    color: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+#titulo{
+	font-size: 50px;
+	font-family: arial;
+	margin-left: 615px;
+	margin-top: -220px;
+	color: #ffffff;
+}
+#logo{
+	margin-left: 320px;
+	margin-top: 200px;
+	width: 200px;
+	height: 200px;
+}

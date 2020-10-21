@@ -1,0 +1,294 @@
+*{
+	margin: 0;
+	padding: 0;
+ }
+
+body{
+ 	background-color: #EF7800;
+ 	font-family: arial;
+ 	font-size: 100% ;
+ }
+
+.header{	
+	display: flex;
+ 	height: 80px;
+ 	background-color:#053CA0;
+ 	width: 100%;
+ 	color: #ffffff;
+ }
+.menu{
+	margin-top: 5px;
+	width: 80px;
+}
+
+#menuzi{
+ 	opacity: 0;
+ }
+
+label{
+ 	cursor: pointer;
+ 	position: relative;
+ 	display: block;
+ 	height: 32px;
+ 	width: 40px;
+ 	margin-left: 15px;
+ 	margin-top: 3px;
+ }
+
+label span{
+ 	position: absolute;
+ 	display: block;
+ 	height: 8px;
+ 	width: 100%;
+ 	border-radius: 30px;
+ 	background-color: #EF7800;
+ 	transition: 0.25s ease-in-out;
+ }
+
+ label span:nth-child(1){
+ 	top:0px;
+ }
+  label span:nth-child(2){
+ 	top:12px;
+ }
+  label span:nth-child(3){
+ 	top:24px;
+ }
+
+ #menuzi:checked + label span:nth-child(1){
+ 	transform: rotate(-45deg);
+ 	top: 14px;
+ } 
+
+ #menuzi:checked + label span:nth-child(2){
+ 	opacity: 0;
+ } 
+
+ #menuzi:checked + label span:nth-child(3){
+ 	transform: rotate(45deg);
+ 	top: 14px;
+ } 
+
+
+ input[type="checkbox"]:checked ~ nav
+ {
+ 	transform: translateX(250px);
+ }
+
+ nav{
+	margin-top: 27px;
+	position: relative;
+	height: 260px;
+	width: 250px;
+	background-color: #053CA0;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius: 5px;
+	margin-left: -250px;
+	z-index: 1;
+}
+
+nav a{
+	padding: 24px 25px;
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+
+nav a:hover{
+	background-color:#EF7801;
+	color: black; 
+}
+
+ul{
+	list-style: none;
+	position: absolute;
+	width: 100%
+}
+
+.ultimaopcao a{
+	border-bottom-right-radius:5px; 
+}
+
+.logo{
+	width: 33.33%;
+}
+
+.logo h1{
+	padding-top: 20px;
+}
+
+.pagina{
+	width: 33.33%;
+	text-align: center;
+}
+
+.pagina h2{
+	padding-top: 25px;
+	padding-right: 95px;
+}
+
+.infousuario{
+	width: 33.33%;
+	float: right;
+	text-align: center;
+}
+
+.infousuario p{
+	float: right;
+	padding-top: 30px;
+	padding-right: 15px;
+}
+
+.barraescolha{
+	position: relative;
+	margin:0 auto;
+	width: 50%;
+	height: 40px;
+	margin-top: 20px;
+	display: flex;
+}
+
+
+
+.interiora{
+	margin-top: 10px;
+	width: 100%;
+	position: absolute;
+
+}
+
+#aop1{
+	background-color: #053CA0;
+	position: relative;
+	text-align: justify;
+	border:none;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+}
+#aop2{
+	position: relative;
+	text-align: justify;
+	border-bottom: solid 1px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+#aop3{
+	position: relative;
+	text-align: justify;
+	border-bottom: solid 1px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+#barraescolha a:hover{
+	background-color:#053CA0;
+	color:#ffffff;
+	border:none;
+}
+
+#batepapo{
+	margin: 0 auto;
+	margin-top:30px;
+	width: 90%;
+	height: 70%;
+	border-left: solid 1px;
+	border-right: solid 1px;
+}
+
+#conversa{
+	width: 95%;
+	height: 80%;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 30px;
+	overflow: auto;
+}
+#envio{
+	margin-top: 10px;
+	width: 100%;
+	height: 20%;
+	text-align: center;
+}
+
+#rascunho{
+	width: 80%;
+	outline: none;
+	border-radius: 30px;
+	height: 100%;
+	border: solid 1px;
+	padding-left: 10px;
+	font-size: 15pt;
+}
+
+#btnenvio{
+	border: solid 1px;
+	border-radius: 30px;
+	width: 70px;
+	height:50px;
+	outline: none;
+	cursor: pointer;
+}
+
+.mensagemvinda{
+	margin-left: 30px;
+	height: -100%;
+	width: 40%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border: solid 1px;
+	border-radius: 1px;
+	text-align: justify;
+	background-color: #EF7800;
+	
+	}
+
+.mensagemida{
+	border-radius: 1px;
+	float: right;
+	margin-right: 30px;
+	height: -100%;
+	width: 40%;
+	margin-bottom: 10px;
+	border: solid 1px;
+	text-align: justify;
+	background-color: #EF7800;
+	
+	
+}
+.cronologia{
+	width: 100%;
+	display: flex;
+	height: 20px;
+	background-color:#EF7800;
+}
+
+.remetente{
+	font-size: 110%;
+	margin-left: 5px;
+	width: 100%;
+	display: flex;
+	height: 20px;
+	background-color:#EF7800;
+}
+
+.textomsg{
+	padding-left: 10px;
+	display:inline;
+	background-color:#EF7800;
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+.data{
+	margin-right: 10px;
+}
+.hora{
+	margin-right: 5px;
+}
