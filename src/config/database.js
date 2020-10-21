@@ -3,7 +3,7 @@ module.exports = {
   host: 'localhost',
   username: 'root',
   password: 'root',
-  database: 'dbEnsinando',
+  database: 'db_ensinando',
   define: {
     underscored: true,
     underscoredAll: true,
