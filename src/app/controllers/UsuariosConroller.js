@@ -9,6 +9,17 @@ const ctrls = {
     res.status(400).json([size, data]);
   },
 
+  async getUsuario(req, res) {
+    const { id } = req.params;
+    const user = await Usuario.findByPk(id);
+
+    if (user == null) {
+      res.status(404).json({ error: 'user not found' });
+    }
+
+    res.status(400).json(user);
+  },
+
 };
 
 module.exports = ctrls;
