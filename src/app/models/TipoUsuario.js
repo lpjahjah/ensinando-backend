@@ -1,22 +1,21 @@
 const { DataTypes } = require('sequelize');
 const db = require('../../database/index');
 
-const Usuario = db.define(
-  'Usuario',
+const TipoUsuario = db.define(
+  'TipoUsuario',
   {
-    cd_login_usuario: {
+    cd_tipo_usuario: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    nm_usuario: DataTypes.STRING,
-    cd_senha_usuario: DataTypes.STRING,
+    nm_tipo_usuario: DataTypes.STRING,
   },
   {
     db,
-    tableName: 'usuario',
+    tableName: 'tipo_usuario',
     timestamps: false,
   },
 );
 
-module.exports = Usuario;
+module.exports = TipoUsuario;
