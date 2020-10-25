@@ -193,7 +193,7 @@ ul{
 	color: #ffffff;
 	border:none;
 }
-#exerciciocaixa1{
+.exerciciocaixa{
 	width: 220px;
 	height: 80px;
 	background-color:  #053CA0;
@@ -201,13 +201,14 @@ ul{
 	font-size: 14;
 	border-radius: 10px;
 	text-align: center;
-	margin-left: 350px;
-	margin-top: 100px;
+	margin-left: 10px;
+	margin-top: 10px;
+	float: left;
 }
 #responder{
 	color: white;
 }
-#exerciciocaixa2{
+/* #exerciciocaixa2{
 	width: 220px;
 	height: 80px;
 	background-color:  #053CA0;
@@ -230,4 +231,4 @@ ul{
 	margin-top: -80px;
 
 
-}
+} */

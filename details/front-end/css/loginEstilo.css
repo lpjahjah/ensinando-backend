@@ -32,7 +32,7 @@ div#Corpo-form h1{
 	padding: 20px;
 }
 
-input[type=submit] {
+input[type=button] {
 	background-color: #053CA0;
 	color: white;
 	border:none;

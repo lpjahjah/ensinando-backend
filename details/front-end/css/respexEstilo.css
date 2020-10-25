@@ -196,11 +196,11 @@ ul{
 	color: #ffffff;
 	border:none;
 }
-#conteiner{
+#container{
 	margin-top: 30px;
 	margin-left: 140px;
 	position: absolute;
-	height: 460px;
+	min-height: 460px;
 	width: 1070px;
 	background-color: white;
 }
@@ -216,9 +216,12 @@ ul{
 	width: 150px;
 	height: 50px;
 }
-#exercicio2{
+.exercicio2{
 	margin-top: 15px;
 }
 .alternativa{
 	margin-top: 10px;
+}
+.alternativa:last-child{
+	margin-bottom: 10px;
 }
