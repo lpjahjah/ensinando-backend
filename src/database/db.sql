@@ -82,7 +82,7 @@ Insert Into situacao_prazo values (3, 'Concluido');
 
 Create Table usuario
 (
-	cd_login_usuario INT,
+	cd_login_usuario INT NOT NULL AUTO_INCREMENT,
 	nm_usuario VARCHAR(45),
 	cd_senha_usuario VARCHAR(45),
 	constraint primary key pk_usuario (cd_login_usuario)

@@ -26,7 +26,6 @@ const Role = db.define(
   {
     db,
     tableName: 'usuario_tipo_usuario',
-    timestamps: false,
   },
 );
 
