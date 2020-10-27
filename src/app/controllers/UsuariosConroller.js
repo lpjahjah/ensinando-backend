@@ -24,6 +24,7 @@ const ctrls = {
 
   async authenticateUsuario(req, res) {
     req.body.cd_senha_usuario = MD5(req.body.cd_senha_usuario).toString();
+    // eslint-disable-next-line camelcase
     const { cd_login_usuario, cd_senha_usuario } = req.body;
 
     const data = await Usuario.findOne({
