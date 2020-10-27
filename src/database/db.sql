@@ -136,7 +136,7 @@ Create Table atividade
 	dt_prazo DATE,
 	hr_prazo TIME,
 	nm_atividade VARCHAR(45),
-	constraint primary key pk_atividade (cd_atividade, cd_situacao),
+	constraint primary key pk_atividade (cd_atividade),
 	constraint foreign key fk_tipo_situacao_atividade (cd_situacao) references situacao_prazo (cd_situacao)
 );
 
@@ -150,7 +150,7 @@ Create Table exercicio
 	cd_atividade INT,
 	txt_exercicio LONGTEXT,
 	img_exercicio LONGBLOB,
-	constraint primary key pk_exercicio (cd_exercicio, cd_atividade),
+	constraint primary key pk_exercicio (cd_exercicio),
 	constraint foreign key fk_exercicio_atividade (cd_atividade) references atividade (cd_atividade)
 );
 
@@ -167,8 +167,7 @@ Create Table questao_alternativa
 	cd_exercicio INT,
 	cd_atividade INT,
 	constraint primary key pk_alternativa (cd_alternativa),
-	constraint foreign key fk_questao_alternativa_exercicio (cd_exercicio) references exercicio (cd_exercicio),
-	constraint foreign key fk_questao_alternativa_alternativa (cd_atividade) references exercicio (cd_atividade)
+	constraint foreign key fk_questao_alternativa_exercicio (cd_exercicio) references exercicio (cd_exercicio)
 );
 
 Insert Into questao_alternativa values (1,'2000 metros', true, 'A)', 1,1);
@@ -185,7 +184,8 @@ Create Table resposta_usuario
 	txt_resposta_usuario LONGTEXT,
 	cd_resposta_alternativa INT,
 	cd_alternativa INT,
-	constraint primary key pk_resposta_usuario (cd_resposta_usuario, cd_login_usuario, cd_exercicio),
+	constraint primary key pk_resposta_usuario (cd_resposta_usuario),
+	constraint foreign key fk_resposta_usuario_usuario (cd_login_usuario) references usuario (cd_login_usuario),
 	constraint foreign key fk_exercicio_atividade (cd_exercicio) references exercicio (cd_exercicio),
 	constraint foreign key fk_resposta_usuario_alternativa (cd_alternativa) references questao_alternativa (cd_alternativa)
 );
@@ -203,7 +203,7 @@ Create Table turma
 	img_didatico LONGBLOB,
 	dt_encerramento_turma DATE,
 	txt_conteudo_didatico LONGTEXT,
-	constraint primary key pk_turma (cd_turma, cd_materia),
+	constraint primary key pk_turma (cd_turma),
 	constraint foreign key fk_turma_materia_cd (cd_materia) references materia (cd_materia)
 );
 
@@ -219,10 +219,8 @@ Create Table aula
 	nm_conteudo_aula VARCHAR(45),
 	img_conteudo_aula LONGBLOB,
 	cd_turma INT,
-	cd_materia INT,
-	constraint primary key pk_aula (cd_aula, cd_turma, cd_materia),
-	constraint foreign key fk_aula_turma (cd_turma) references turma (cd_turma),
-	constraint foreign key fk_aula_turma_materia (cd_materia) references turma (cd_materia)
+	constraint primary key pk_aula (cd_aula),
+	constraint foreign key fk_aula_turma (cd_turma) references turma (cd_turma)
 );
 
 Insert Into aula values (1,null,'Trigonometria é um ramo da matemática que estuda as relações entre os comprimentos de 2 lados de um triângulo retângulo, para diferentes valores de um dos seus ângulos agudos.',
@@ -251,7 +249,7 @@ Create Table mensagem
 	txt_mensagem LONGTEXT,
 	cd_login_usuario INT,
 	cd_turma INT,
-	constraint primary key pk_mensagem (cd_mensagem, cd_login_usuario, cd_turma),
+	constraint primary key pk_mensagem (cd_mensagem),
 	constraint foreign key fk_mensagem_turma_usuario_login (cd_login_usuario) references turma_usuario (cd_login_usuario),
 	constraint foreign key fk_mensagem_turma_usuario_turma (cd_turma) references turma_usuario (cd_turma)
 );
@@ -260,3 +258,17 @@ Insert Into mensagem values (1, '2020-08-23', '14:20:00', 'Eu tenho uma dúvida'
 Insert Into mensagem values (2, current_date(), current_time(), 'Eu não entendi essa parte', 32505, 3);
 Insert Into mensagem values (3, '2020-08-23', '14:20:00', 'Eu tenho uma dúvida', 32477, 1);
 Insert Into mensagem values (4, current_date(), current_time(), 'Eu tenho uma dúvida', 32477, 1);
+
+Create Table atividade_turma
+(
+	cd_atividade INT,
+	cd_turma INT,
+	
+	constraint primary key pk_atividade_turma (cd_atividade, cd_turma),
+	constraint foreign key fk_atividade_turma_atividade (cd_atividade) references atividade (cd_atividade),
+	constraint foreign key fk_atividade_turma_turma (cd_turma) references turma (cd_turma)
+);
+
+Insert Into atividade_turma values(1, 2);
+Insert Into atividade_turma values(2, 3);
+Insert Into atividade_turma values(3, 1);
