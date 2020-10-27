@@ -14,7 +14,7 @@ const Aula = db.define(
     txt_conteudo_didatico: DataTypes.TEXT,
     nm_conteudo_aula: DataTypes.STRING(45),
     cd_turma: {
-      type: DataTypes.INT,
+      type: DataTypes.INTEGER,
       refernces: {
         model: Turma,
         key: 'cd_turma',
