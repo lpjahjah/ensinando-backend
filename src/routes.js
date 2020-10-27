@@ -14,4 +14,7 @@ routes.put('/usuarios/:id', controllers.usuario.putUsuario);
 routes.get('/roles', controllers.roles.getRoles);
 routes.get('/roles/:id', controllers.roles.getUsuarioRoles);
 
+// TURMA_USUARIOS ROUTES
+routes.get();
+
 module.exports = routes;
