@@ -3,7 +3,7 @@ const { TipoUsuario, Role } = require('../models/index');
 const ctrls = {
   async getRoles(_, res) {
     const data = await TipoUsuario.findAll();
-    res.status(400).json(data);
+    res.status(200).json(data);
   },
 
   async getUsuarioRoles(req, res) {
@@ -18,7 +18,7 @@ const ctrls = {
           attributes: ['nm_tipo_usuario'],
         },
     });
-    res.status(400).json(data);
+    res.status(200).json(data);
   },
 };
 

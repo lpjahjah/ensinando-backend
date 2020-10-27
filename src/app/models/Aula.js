@@ -15,7 +15,7 @@ const Aula = db.define(
     nm_conteudo_aula: DataTypes.STRING(45),
     cd_turma: {
       type: DataTypes.INTEGER,
-      refernces: {
+      references: {
         model: Turma,
         key: 'cd_turma',
       },
