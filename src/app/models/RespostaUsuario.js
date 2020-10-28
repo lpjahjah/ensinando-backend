@@ -10,6 +10,7 @@ const RespostaUsuario = db.define(
   {
     cd_resposta_usuario: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       primaryKey: true,
     },
     cd_login_usuario: {

@@ -1,5 +1,7 @@
 const { MD5 } = require('crypto-js');
-const { Usuario, TipoUsuario } = require('../models/index');
+const {
+  Usuario, TipoUsuario, Turma, TurmaUsuario, Materia, RespostaUsuario,
+} = require('../models/index');
 
 const ctrls = {
 
@@ -53,6 +55,30 @@ const ctrls = {
     const persisted = await Usuario.findByPk(id);
     persisted.update(req.body);
     res.status(200).json(persisted);
+  },
+
+  async getTurmasUsuario(req, res) {
+    const { id } = req.params;
+
+    const data = await TurmaUsuario.findAll({
+      where: {
+        cd_login_usuario: id,
+      },
+      attributes: [],
+      include: {
+        model: Turma,
+        include: Materia,
+      },
+    });
+    res.status(200).json(data);
+  },
+
+  async postRespostaUsuario(req, res) {
+    const { body } = req;
+
+    const data = await RespostaUsuario.create(body);
+
+    res.status(200).json(data);
   },
 
 };

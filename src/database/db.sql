@@ -178,7 +178,7 @@ Insert Into questao_alternativa values (4,'6KM', false, 'D)', 1,1);
 
 Create Table resposta_usuario 
 (
-	cd_resposta_usuario INT,
+	cd_resposta_usuario INT NOT NULL AUTO_INCREMENT,
 	cd_login_usuario INT,
 	cd_exercicio INT,
 	txt_resposta_usuario LONGTEXT,

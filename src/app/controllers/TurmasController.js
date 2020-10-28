@@ -3,13 +3,14 @@ const {
 } = require('../models/index');
 
 const ctrls = {
-  async getAtividadeTurma(req, res) {
-    const { idAtividade } = req.params;
+  async getAtividadesTurma(req, res) {
+    const { id } = req.params;
 
     const data = await AtividadeTurma.findAll({
       where: {
-        cd_atividade: idAtividade,
+        cd_turma: id,
       },
+      attributes: [],
       include: {
         model: Atividade,
         include: SituacaoPrazo,

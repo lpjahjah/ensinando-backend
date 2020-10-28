@@ -12,7 +12,7 @@ const QuestaoAlternativa = db.define(
     },
     txt_alternativa: DataTypes.TEXT,
     ic_alternativa_correta: DataTypes.BOOLEAN,
-    nr_alternativa: DataTypes.STRING,
+    nm_alternativa: DataTypes.STRING,
     cd_exercicio: {
       type: DataTypes.INTEGER,
       references: {
