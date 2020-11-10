@@ -3,6 +3,7 @@
 DROP SCHEMA IF EXISTS db_ensinando;
 CREATE SCHEMA db_ensinando;
 USE db_ensinando;
+set collation_connection = utf8_unicode_ci;
 
 Create Table tipo_usuario
 (
