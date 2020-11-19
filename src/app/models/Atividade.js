@@ -9,6 +9,7 @@ const Atividade = db.define(
     cd_atividade: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     cd_situacao: {
       type: DataTypes.INTEGER,

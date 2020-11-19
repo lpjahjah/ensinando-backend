@@ -10,6 +10,7 @@ const Exercicio = db.define(
     {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     cd_atividade: {
       type: DataTypes.INTEGER,

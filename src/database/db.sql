@@ -47,20 +47,12 @@ Create Table usuario_tipo_usuario
 	constraint foreign key fk_usuario (cd_login_usuario) references usuario (cd_login_usuario)
 );
 
--- Insert Into usuario_tipo_usuario values (32610, 1);
--- Insert Into usuario_tipo_usuario values (32647, 2);
--- Insert Into usuario_tipo_usuario values (32647, 3);
--- Insert Into usuario_tipo_usuario values (32477, 3); 
--- Insert Into usuario_tipo_usuario values (32512, 3); 
--- Insert Into usuario_tipo_usuario values (32505, 3); 
-
 Create Table denuncia 
 (
 	cd_login_usuario INT,
 	cd_denuncia INT,
 	cd_tipo_denuncia INT,
 	ds_denuncia VARCHAR(45),
-	img_denuncia BLOB,
 	dt_denuncia DATE,
 	hr_denuncia TIME,
 	constraint primary key pk_denuncia (cd_login_usuario, cd_denuncia, cd_tipo_denuncia),
@@ -73,34 +65,23 @@ Create Table denuncia
 
 Create Table atividade 
 (
-	cd_atividade INT,
+	cd_atividade INT NOT NULL AUTO_INCREMENT,
+	nm_atividade VARCHAR(45),
 	cd_situacao  INT,
-	dt_inicio DATE,
-	hr_inicio TIME,
 	dt_prazo DATE,
 	hr_prazo TIME,
-	nm_atividade VARCHAR(45),
 	constraint primary key pk_atividade (cd_atividade),
 	constraint foreign key fk_tipo_situacao_atividade (cd_situacao) references situacao_prazo (cd_situacao)
 );
 
--- Insert Into atividade values (1, 2, '2020-08-21','12:00:00', '2020-08-23', '12:00:00', 'Atividade de Trigonometria');
--- Insert Into atividade values (2, 2, '2020-08-23','12:30:00', '2020-08-25', '12:30:00', 'Atividade Barroco e Aspectos Socias');
--- Insert Into atividade values (3, 2, '2020-08-25','12:00:00', '2020-08-27', '12:00:00', 'Atividade de Urbanização e Globalização');
-
 Create Table exercicio 
 (
-	cd_exercicio INT,
+	cd_exercicio INT NOT NULL AUTO_INCREMENT,
 	cd_atividade INT,
 	txt_exercicio LONGTEXT,
-	img_exercicio LONGBLOB,
 	constraint primary key pk_exercicio (cd_exercicio),
 	constraint foreign key fk_exercicio_atividade (cd_atividade) references atividade (cd_atividade)
 );
-
--- Insert Into exercicio values (1,1,'A rua Tenório Quadros e a avenida Teófilo Silva, ambas retilíneas,  cruzam-se conforme um ângulo de 30º. O posto de gasolina Estrela do Sul  encontra-se na avenida Teófilo Silva a 4 000 m do citado cruzamento. Sabendo que o percurso do posto Estrela do Sul até a rua tenório quadros forma um ângulo de 90° no ponto de encontro do posto com a rua Teófilo Silva, determine em quilômetros, a distância entre o posto de gasolina Estrela do Sul e a rua Tenório Quadros?',null);
--- Insert Into exercicio values (2,2, 'O que foi o Barroco? Em qual período histórico teve a sua maior influência? O barroco ainda tem influências nos dias atuais? Justifique sua resposta e cite exemplos', null);
--- Insert Into exercicio values (3,3, 'Diferencie cidade e município descrevendo os seus respectivos conceitos.', null);
 
 Create Table questao_alternativa 
 (
@@ -142,18 +123,16 @@ Create Table turma
 (
 	cd_turma INT,
 	cd_materia INT,
-	nm_sala VARCHAR(45),
+	nm_turma VARCHAR(45),
 	dt_criacao DATE,
-	img_didatico LONGBLOB,
 	dt_encerramento_turma DATE,
-	txt_conteudo_didatico LONGTEXT,
 	constraint primary key pk_turma (cd_turma),
-	constraint foreign key fk_turma_materia_cd (cd_materia) references materia (cd_materia)
+	constraint foreign key pk_turma_materia (cd_materia) references materia (cd_materia)
 );
 
--- Insert Into turma values (1, 1,'Matemática', '2020-08-23', null, '2020-08-31', 'Trigonometria é a área da matemática que estuda as relações envolvendo os lados de um triângulo retângulo, que um polígono que possui três ângulos. A origem do nome vem do grego que refere-se a medidas de três ângulos. A partir dos lados do triângulo é que encontramos as razões seno, cosseno e tangente.');
--- Insert Into turma values (2, 25,'Português', '2020-08-23', null, '2020-08-31', 'Barroco é o estilo artístico que floresceu entre o final do século XVI e meados do século XVIII, inicialmente na Itália, difundindo-se em seguida pelos países católicos da Europa e da América, antes de atingir, em uma forma modificada, as áreas protestantes e alguns pontos do Oriente.');
--- Insert Into turma values (3, 19, 'Geografia', '2020-08-23', null, '2020-08-31', 'Urbanização é o crescimento das cidades, tanto em população quanto em extensão territorial. É o processo em que o espaço rural transforma-se em espaço urbano, com a consequente migração populacional do tipo campo–cidade que, quando ocorre de forma intensa e acelerada, é chamada de êxodo rural.');
+-- Insert Into turma values (1, 1,'Matemática', '2020-08-23', null, '2020-08-31');
+-- Insert Into turma values (2, 25,'Português', '2020-08-23', null, '2020-08-31');
+-- Insert Into turma values (3, 19, 'Geografia', '2020-08-23', null, '2020-08-31');
 
 Create Table aula 
 (
@@ -208,7 +187,6 @@ Create Table atividade_turma
 	cd_atividade INT,
 	cd_turma INT,
 	
-	constraint primary key pk_atividade_turma (cd_atividade, cd_turma),
 	constraint foreign key fk_atividade_turma_atividade (cd_atividade) references atividade (cd_atividade),
 	constraint foreign key fk_atividade_turma_turma (cd_turma) references turma (cd_turma)
 );
