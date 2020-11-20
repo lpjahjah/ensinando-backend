@@ -79,6 +79,7 @@ Create Table exercicio
 	cd_exercicio INT NOT NULL AUTO_INCREMENT,
 	cd_atividade INT,
 	txt_exercicio LONGTEXT,
+	ic_dissertativo BOOL,
 	constraint primary key pk_exercicio (cd_exercicio),
 	constraint foreign key fk_exercicio_atividade (cd_atividade) references atividade (cd_atividade)
 );
@@ -90,16 +91,9 @@ Create Table questao_alternativa
 	ic_alternativa_correta BOOL,
 	nm_alternativa VARCHAR(45),
 	cd_exercicio INT,
-	cd_atividade INT,
 	constraint primary key pk_alternativa (cd_alternativa),
 	constraint foreign key fk_questao_alternativa_exercicio (cd_exercicio) references exercicio (cd_exercicio)
 );
-
--- Insert Into questao_alternativa values (1,'2000 metros', true, 'A)', 1,1);
--- Insert Into questao_alternativa values (2,'300 metros', false, 'B)', 1,1);
--- Insert Into questao_alternativa values (3,'1KM', false, 'C)', 1,1);
--- Insert Into questao_alternativa values (4,'6KM', false, 'D)', 1,1);
-
 
 Create Table resposta_usuario 
 (

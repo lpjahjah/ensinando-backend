@@ -12,6 +12,8 @@ const Exercicio = db.define(
       primaryKey: true,
       autoIncrement: true,
     },
+    txt_exercicio: DataTypes.TEXT,
+    ic_dissertativo: DataTypes.BOOLEAN,
     cd_atividade: {
       type: DataTypes.INTEGER,
       references: {
@@ -19,7 +21,6 @@ const Exercicio = db.define(
         key: 'cd_atividade',
       },
     },
-    txt_exercicio: DataTypes.TEXT,
   },
   {
     db,
