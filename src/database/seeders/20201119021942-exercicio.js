@@ -8,16 +8,22 @@ module.exports = {
     },
     {
       cd_exercicio: 2,
+      cd_atividade: 1,
+      ic_dissertativo: true,
+      txt_exercicio: 'Diferencie cidade e município descrevendo os seus respectivos conceitos.',
+    }],
+    {
+      cd_exercicio: 3,
       cd_atividade: 2,
       ic_dissertativo: true,
       txt_exercicio: 'O que foi o Barroco? Em qual período histórico teve a sua maior influência? O barroco ainda tem influências nos dias atuais? Justifique sua resposta e cite exemplos.',
     },
     {
-      cd_exercicio: 3,
-      cd_atividade: 1,
+      cd_exercicio: 4,
+      cd_atividade: 3,
       ic_dissertativo: true,
-      txt_exercicio: 'Diferencie cidade e município descrevendo os seus respectivos conceitos.',
-    }], {});
+      txt_exercicio: 'Defina urbanização nos dias modernos e suas possíveis contribuições para com a globalização.',
+    }, {});
   },
 
   down: async (queryInterface) => {

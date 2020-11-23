@@ -11,11 +11,6 @@ module.exports = {
       cd_login_usuario: 32001,
       nm_usuario: 'Ana Carolina',
       cd_senha_usuario: MD5(123).toString(),
-    },
-    {
-      cd_login_usuario: 32002,
-      nm_usuario: 'Henrique dos Santos',
-      cd_senha_usuario: MD5(321).toString(),
     }], {});
   },
 
