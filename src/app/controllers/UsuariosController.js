@@ -79,8 +79,7 @@ const ctrls = {
     } else {
       await RespostaUsuario.create(body);
     }
-
-    res.status(200);
+    res.sendStatus(200);
   },
 
 };
