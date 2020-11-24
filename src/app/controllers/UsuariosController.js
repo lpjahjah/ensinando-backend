@@ -72,9 +72,15 @@ const ctrls = {
   async postRespostaUsuario(req, res) {
     const { body } = req;
 
-    const data = await RespostaUsuario.create(body);
+    if (Array.isArray(body)) {
+      body.forEach(async (item) => {
+        await RespostaUsuario.create(item);
+      });
+    } else {
+      await RespostaUsuario.create(body);
+    }
 
-    res.status(200).json(data);
+    res.status(200);
   },
 
 };
