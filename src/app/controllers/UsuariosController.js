@@ -1,4 +1,3 @@
-const { MD5 } = require('crypto-js');
 const {
   Usuario, TipoUsuario, Turma, TurmaUsuario, Materia, RespostaUsuario,
 } = require('../models/index');
@@ -25,7 +24,6 @@ const ctrls = {
   },
 
   async authenticateUsuario(req, res) {
-    req.body.cd_senha_usuario = MD5(req.body.cd_senha_usuario).toString();
     // eslint-disable-next-line camelcase
     const { cd_login_usuario, cd_senha_usuario } = req.body;
 
@@ -43,7 +41,6 @@ const ctrls = {
   },
 
   async postUsuario(req, res) {
-    req.body.cd_senha_usuario = MD5(req.body.cd_senha_usuario).toString();
     const novoUsuario = await Usuario.create(req.body);
     res.status(201).json(novoUsuario);
   },
@@ -51,7 +48,6 @@ const ctrls = {
   async putUsuario(req, res) {
     const { id } = req.params;
 
-    req.body.cd_senha_usuario = MD5(req.body.cd_senha_usuario).toString();
     const persisted = await Usuario.findByPk(id);
     persisted.update(req.body);
     res.status(200).json(persisted);

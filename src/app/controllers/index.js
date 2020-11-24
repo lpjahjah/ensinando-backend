@@ -1,4 +1,4 @@
-const usuario = require('./UsuariosConroller');
+const usuario = require('./UsuariosController');
 const roles = require('./RolesController');
 const turma = require('./TurmasController');
 const atividade = require('./AtividadesController');
