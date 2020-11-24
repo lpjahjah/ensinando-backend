@@ -17,8 +17,6 @@ const ctrls = {
           'nm_atividade',
           'hr_prazo',
           'dt_prazo',
-          'hr_inicio',
-          'dt_inicio',
           'cd_atividade',
         ],
         include: SituacaoPrazo,
