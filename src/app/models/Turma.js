@@ -9,6 +9,7 @@ const Turma = db.define(
     cd_turma: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     cd_materia: {
       type: DataTypes.INTEGER,
@@ -17,9 +18,8 @@ const Turma = db.define(
         key: 'cd_turma',
       },
     },
-    nm_sala: DataTypes.STRING(45),
-    dt_encerramento_turma: DataTypes.DATE,
-    txt_conteudo_didatico: DataTypes.TEXT,
+    nm_turma: DataTypes.STRING(45),
+    dt_criacao: DataTypes.DATE,
   },
   {
     db,

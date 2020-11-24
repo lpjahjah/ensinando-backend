@@ -35,7 +35,6 @@ const RespostaUsuario = db.define(
       },
     },
     txt_resposta_usuario: DataTypes.TEXT,
-    cd_resposta_alternativa: DataTypes.INTEGER,
   },
   {
     db,
