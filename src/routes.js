@@ -20,6 +20,10 @@ routes.get('/roles/:id', controllers.roles.getUsuarioRoles);
 routes.get('/turmas/atividades/:id', controllers.turma.getAtividadesTurma);
 
 // ATIVIDADES ROUTES
+routes.post('/atividades', controllers.atividade.postAtividade);
 routes.get('/atividades/exercicios/:id', controllers.atividade.getExerciciosAtividade);
+
+// EXERCICIOS ROUTES
+routes.post('/exercicios', controllers.exercicio.postExercicio);
 
 module.exports = routes;

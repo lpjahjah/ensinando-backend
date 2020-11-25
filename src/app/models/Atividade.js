@@ -17,10 +17,10 @@ const Atividade = db.define(
         model: SituacaoPrazo,
         key: 'cd_situacao',
       },
-      dt_prazo: DataTypes.STRING(45),
-      hr_prazo: DataTypes.STRING(45),
-      nm_atividade: DataTypes.STRING(45),
     },
+    dt_prazo: DataTypes.DATE,
+    hr_prazo: DataTypes.TIME,
+    nm_atividade: DataTypes.STRING(45),
   },
   {
     db,

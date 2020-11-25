@@ -1,5 +1,5 @@
 const {
-  Exercicio, QuestaoAlternativa,
+  Atividade, Exercicio, QuestaoAlternativa,
 } = require('../models/index');
 
 const ctrl = {
@@ -13,6 +13,14 @@ const ctrl = {
       include: QuestaoAlternativa,
     });
     res.status(200).json(data);
+  },
+
+  async postAtividade(req, res) {
+    // eslint-disable-next-line camelcase
+    const { body } = req;
+    body.cd_situacao = 1;
+    const data = await Atividade.create(body);
+    res.status(201).json(data.cd_atividade);
   },
 
 };
