@@ -11,6 +11,14 @@ module.exports = {
     {
       cd_materia: 3,
       nm_materia: 'Geografia',
+    },
+    {
+      cd_materia: 4,
+      nm_materia: 'História',
+    },
+    {
+      cd_materia: 5,
+      nm_materia: 'Filosofia',
     }], {});
   },
 

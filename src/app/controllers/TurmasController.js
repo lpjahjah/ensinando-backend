@@ -1,5 +1,5 @@
 const {
-  AtividadeTurma, Atividade, SituacaoPrazo,
+  Turma, AtividadeTurma, Atividade, SituacaoPrazo, TurmaUsuario,
 } = require('../models/index');
 
 const ctrls = {
@@ -24,6 +24,34 @@ const ctrls = {
     });
     res.status(200).json(data);
   },
+
+  async postTurma(req, res) {
+    // eslint-disable-next-line camelcase
+    const { cd_materia, nm_turma, usuarios } = req.body;
+
+    const date = new Date();
+
+    // eslint-disable-next-line camelcase
+    const dt_criacao = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDay()}`;
+
+    const turma = {
+      cd_materia,
+      nm_turma,
+      dt_criacao,
+    };
+    // eslint-disable-next-line camelcase
+    const { cd_turma } = await Turma.create(turma);
+
+    usuarios.forEach(async (cd) => {
+      await TurmaUsuario.create({
+        cd_login_usuario: cd,
+        cd_turma,
+      });
+    });
+
+    res.status(201).json(cd_turma);
+  },
+
 };
 
 module.exports = ctrls;

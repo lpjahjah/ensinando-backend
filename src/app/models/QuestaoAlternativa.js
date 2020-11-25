@@ -9,10 +9,10 @@ const QuestaoAlternativa = db.define(
     cd_alternativa: {
       type: DataTypes.INTEGER,
       primaryKey: true,
+      autoIncrement: true,
     },
     txt_alternativa: DataTypes.TEXT,
     ic_alternativa_correta: DataTypes.BOOLEAN,
-    nm_alternativa: DataTypes.STRING,
     cd_exercicio: {
       type: DataTypes.INTEGER,
       references: {

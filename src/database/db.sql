@@ -89,7 +89,6 @@ Create Table questao_alternativa
 	cd_alternativa INT NOT NULL AUTO_INCREMENT,
 	txt_alternativa TEXT,
 	ic_alternativa_correta BOOL,
-	nm_alternativa VARCHAR(45),
 	cd_exercicio INT,
 	constraint primary key pk_alternativa (cd_alternativa),
 	constraint foreign key fk_questao_alternativa_exercicio (cd_exercicio) references exercicio (cd_exercicio)

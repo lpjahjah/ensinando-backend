@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const controllers = require('./app/controllers/index');
+const controllers = require('./app/controllers');
 
 const routes = new Router();
 
@@ -18,6 +18,7 @@ routes.get('/roles/:id', controllers.roles.getUsuarioRoles);
 
 // TURMAS ROUTES
 routes.get('/turmas/atividades/:id', controllers.turma.getAtividadesTurma);
+routes.post('/turmas', controllers.turma.postTurma);
 
 // ATIVIDADES ROUTES
 routes.post('/atividades', controllers.atividade.postAtividade);
@@ -25,5 +26,8 @@ routes.get('/atividades/exercicios/:id', controllers.atividade.getExerciciosAtiv
 
 // EXERCICIOS ROUTES
 routes.post('/exercicios', controllers.exercicio.postExercicio);
+
+// MATERIAS ROUTES
+routes.get('/materias', controllers.materia.getMaterias);
 
 module.exports = routes;

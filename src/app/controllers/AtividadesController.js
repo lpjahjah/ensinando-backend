@@ -16,7 +16,6 @@ const ctrl = {
   },
 
   async postAtividade(req, res) {
-    // eslint-disable-next-line camelcase
     const { body } = req;
     body.cd_situacao = 1;
     const data = await Atividade.create(body);
