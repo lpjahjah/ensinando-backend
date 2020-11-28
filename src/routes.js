@@ -18,6 +18,7 @@ routes.get('/roles/:id', controllers.roles.getUsuarioRoles);
 
 // TURMAS ROUTES
 routes.get('/turmas/atividades/:id', controllers.turma.getAtividadesTurma);
+routes.get('/turmas', controllers.turma.getTurmas);
 routes.post('/turmas', controllers.turma.postTurma);
 
 // ATIVIDADES ROUTES
