@@ -7,7 +7,7 @@ const ctrls = {
   async getTurmas(_, res){
     const data = await Turma.findAll();
     res.status(200).json(data);
-  }
+  },
   
   async getAtividadesTurma(req, res) {
     const { id } = req.params;
